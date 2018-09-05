@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_2"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginRight="@dimen/size_2"
+            android:layout_marginTop="@dimen/top5"
+            android:background="#ffffff"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin_left5"
+                android:textSize="@dimen/text_size"
+                android:hint="@string/title"/>
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvTitle"
+                android:layout_below="@+id/tvTitle"
+                android:textSize="@dimen/text_size"
+                android:hint="@string/author"/>
+
+            <ImageView
+                android:id="@+id/imgSubreddit"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/tvAuthor"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/top5"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_failed" />
+
+            <RelativeLayout
+                android:layout_below="@+id/imgSubreddit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvUpVotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginTop="@dimen/top8"
+                    android:hint="@string/votes"/>
+
+                <TextView
+                    android:id="@+id/tvComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:layout_toRightOf="@+id/tvUpVotes"
+                    android:layout_marginLeft="@dimen/margin_left5"
+                    android:layout_marginTop="@dimen/top8"
+                    android:hint="@string/comments"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

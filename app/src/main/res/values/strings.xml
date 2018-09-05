@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RedditSample</string>
+    <string name="author">(google.com)</string>
+    <string name="comments">217 comments</string>
+    <string name="votes">217 up votes</string>
+    <string name="title">Here is the title of a post.</string>
+</resources>
